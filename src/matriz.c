@@ -56,11 +56,9 @@ void contador(int m){
 						j--;
 					}
 				}else{
-					if(i==n){
-						soma = soma + mat[i][j+1];
-						mat[i][j+1] = -1;
-						j++;
-					}
+					soma = soma + mat[i][j+1];
+					mat[i][j+1] = -1;
+					j++;
 				}
 			}
 		}
