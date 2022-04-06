@@ -4,6 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void contador(int m);
+void matriz(int m);
 
 #endif
