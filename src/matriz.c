@@ -1,11 +1,11 @@
 #include "matriz.h"
 
-void contador(int m){
-    int k = 3;
-    int mat[k][k];
+void matriz(int m){
+    int mat[m][m];
+    printf("\n");
 	for(int cont=0; cont<m; cont++){
         for(int cont2=0; cont2<m; cont2++){
-            mat[cont][cont2] = rand()%99;
+            mat[cont][cont2] = rand()%98;
             printf("%d\t", mat[cont][cont2]);
         }
         printf("\n");
@@ -28,8 +28,8 @@ void contador(int m){
                     mat[i][j+1] = -1;       
 					j++;
 				}else{
-					soma = soma + mat[i][j+1];
-                    mat[i][j+1] = -1;      
+					soma = soma + mat[i][j-1];
+                    mat[i][j-1] = -1;      
 					j--;
 				}
 			}
@@ -64,7 +64,7 @@ void contador(int m){
 		}
 	}
     
-    printf("Soma: %d\n", soma);
+    printf("\nSoma dos termos do caminho percorrido: %d\n\n", soma);
 
     for(int cont=0; cont<m; cont++){
         for(int cont2=0; cont2<m; cont2++){
@@ -75,4 +75,5 @@ void contador(int m){
             }
         }
         printf("\n");
+    }
 }
